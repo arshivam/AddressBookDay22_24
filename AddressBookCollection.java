@@ -19,6 +19,8 @@ public class AddressBookCollection {
 			System.out.println("6.Search By City name");
 			System.out.println("7.View By State name");
 			System.out.println("8.View By City name");
+			System.out.println("9.Count persons by city");
+			System.out.println("10.Count persons by state");
 
 			ch= sc.nextInt();
 			switch(ch) {
