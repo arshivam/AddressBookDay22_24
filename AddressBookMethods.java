@@ -1,6 +1,7 @@
 package com.bridgelabz.day22_24;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -127,7 +128,7 @@ public class AddressBookMethods {
 	}
 
 	public void searchPersonByState(String state) {
-		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getState().equals(state))
+		List<AddressBook> list = contact.stream().filter(contactName -> contactName.getState().equals(state))
 				.collect(Collectors.toList());
 		for (AddressBook contact : list) {
 			System.out.println("Name: " + contact.getFirstName() +" "+ contact.getLastName());
@@ -135,7 +136,7 @@ public class AddressBookMethods {
 	}
 
 	public void searchPersonByCity(String city2) {
-		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getCity().equals(city))
+		List<AddressBook> list = contact.stream().filter(contactName -> contactName.getCity().equals(city))
 				.collect(Collectors.toList());
 		for (AddressBook contact : list) {
 			System.out.println("First Name: " + contact.getFirstName()+ "  " + contact.getLastName());
