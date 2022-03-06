@@ -44,6 +44,16 @@ public class AddressBookCollection {
 				city = sc.next();
 				detail.searchPersonByCity(city);
 				break;
+			case 7:
+				System.out.println("\nEnter the state name :- ");
+				state = sc.next();
+				detail.viewPersonByState(state);;
+				break;
+			case 8:
+				System.out.println("\nEnter the city name :- ");
+				city = sc.next();
+				detail.viewPersonByCity(city);;
+				break;
 			}System.out.println("Do you want to continue? if yes press 1");
 			choice = sc.nextInt();
 		}while(choice == 1);
