@@ -6,7 +6,7 @@ public class AddressBookCollection {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int ch;
-		int choice;
+		int choice,count;
 		String city, state;
 		AddressBookMethods detail = new AddressBookMethods();
 		do {
@@ -53,6 +53,18 @@ public class AddressBookCollection {
 				System.out.println("\nEnter the city name :- ");
 				city = sc.next();
 				detail.viewPersonByCity(city);;
+				break;
+			case 9:
+				System.out.println("\nEnter the city name to find person in city :- ");
+				city = sc.next();
+				count = detail.countPersonsByCity(city);
+				System.out.println("Number of persons by city "+city+" is "+count);
+				break;
+			case 10:
+				System.out.println("\nEnter the state name to find person in state  :- ");
+				state = sc.next();
+				count = detail.countPersonsByState(state);
+				System.out.println("Number of persons by state "+state+" is "+count);
 				break;
 			}System.out.println("Do you want to continue? if yes press 1");
 			choice = sc.nextInt();
