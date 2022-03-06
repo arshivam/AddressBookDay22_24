@@ -20,7 +20,7 @@ public class AddressBookMethods {
 		System.out.println("Enter the address: ");
 		address = sc.next();
 		System.out.println("Enter the city: ");
-		city = sc.next();sc.nextLine();
+		city = sc.next();
 		System.out.println("Enter the state: ");
 		state = sc.next();
 		System.out.println("Enter the zip code: ");

@@ -17,6 +17,8 @@ public class AddressBookCollection {
 			System.out.println("4.Delete contact");
 			System.out.println("5.Search By State name");
 			System.out.println("6.Search By City name");
+			System.out.println("7.View By State name");
+			System.out.println("8.View By City name");
 
 			ch= sc.nextInt();
 			switch(ch) {
