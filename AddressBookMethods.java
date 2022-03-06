@@ -2,6 +2,7 @@ package com.bridgelabz.day22_24;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class AddressBookMethods {
 
@@ -124,10 +125,27 @@ public class AddressBookMethods {
 				System.out.println("No one with these details found");
 		}
 	}
+
+	public void searchPersonByState(String state) {
+		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getState().equals(state))
+				.collect(Collectors.toList());
+		for (AddressBook contact : list) {
+			System.out.println("Name: " + contact.getFirstName() +" "+ contact.getLastName());
+		}
+	}
+
+	public void searchPersonByCity(String city2) {
+		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getCity().equals(city))
+				.collect(Collectors.toList());
+		for (AddressBook contact : list) {
+			System.out.println("First Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+		}
+	}
 	public void DisplayContacts() {
 		System.out.println("\nContacts Present in Address Book:");
 		for(int i=0;i<contact.size();i++) {
 			System.out.println(contact.get(i));
 		}
+
 	}
 }
